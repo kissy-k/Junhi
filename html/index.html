@@ -72,97 +72,82 @@
             cursor: pointer;
         }
 
-        #progress, #volume {
-            width: 100%;
-            margin-top: 10px;
-            height: 6px;
-            border-radius: 5px;
-            background: rgba(255,255,255,0.3);
-            outline: none;
-        }
 
-        #progress::-webkit-slider-thumb,
-        #volume::-webkit-slider-thumb {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ff4081;
-            cursor: pointer;
-            appearance: none;
-        }
     </style>
 </head>
 <body>
 
 <div class="main">
     <!-- Images -->
-    <img src="jun.gif" style="width:100%; height:250px; position:absolute; top:0; left:0;">
-    <img src="junnie.gif" style="width:100%; height:15px; position:absolute; top:150px; left:0;">
-    <img src="greeeeeeeen.jpg" style="width:100%; height:50px; position:absolute; top:165px; left:0;">
-    <img src="Black.jpeg" style="width:611px; height:255px; position:absolute; top:205px; left:0;">
-    <img src="noice.jpg" style="width:136px; height:265px; position:absolute; top:205px; left:0;">
-    <img src="ba.jpg" style="width:136px; height:265px; position:absolute; top:205px; left:-10px;">
-    <img src="Junhui.jpg" style="width:300px; height:135px; position:absolute; top:475px; left:-10px;">
-    <img src="qwertyui.jpg" style="width:309px; height:130px; position:absolute; top:475px; left:0;">
+    <img src="../assets/jun.gif..." style="width:100%; height:250px; position:absolute; top:0; left:0;">
+    <img src="../assets/junnie.gif..." style="width:100%; height:15px; position:absolute; top:150px; left:0;">
+    <img src="../assets/greeeeeeeen.jpg..." style="width:100%; height:50px; position:absolute; top:165px; left:0;">
+    <img src="../assets/Black.jpeg..." style="width:611px; height:255px; position:absolute; top:205px; left:0;">
+    <img src="../assets/noice.jpg..." style="width:136px; height:265px; position:absolute; top:205px; left:0;">
+    <img src="../assets/ba.jpg..." style="width:136px; height:265px; position:absolute; top:205px; left: 475px; right: 100px; ">
+    <img src="../assets/Junhui.jpg..." style="width: 309px; height: 150px; object-fit: fill; position: absolute; top: 460px; left: -15; right: 0; margin: 0 auto;">>
+    <img src="../assets/qwertyui.jpg..." style="width: 309px; height: 150px; object-fit: fill; position: absolute; top: 460px; left: 0; right: -15; margin: 0 auto;">
 
-    <div class="button-container">
-        <button onclick="loadpage('page1')"><img src="blah.gif" width="20">𝓛𝓮𝓽𝓽𝓮𝓻</button>
-        <button onclick="loadpage('page2')"><img src="star.gif" width="22">𝓖𝓸𝓼𝓮</button>
-        <button onclick="loadpage('page3')"><img src="heart.gif" width="22">𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽</button>
-    </div>
+   <div class="button-container">
 
-    <div id="content"></div>
+    <button onclick="loadpage('page1')">
+        <img src="../assets/blah.gif..." style="width: 20px;">
+        <span style="color: white; margin-left: 10px; position: relative ; top: -5px;">𝓛𝓮𝓽𝓽𝓮𝓻</span>
+    </button>
+    
+    
+        <button onclick="loadpage('page2')">
+        <img src="../assets/star.gif" style="width: 20px;">
+        <span style="color: white; margin-left: 10px; position: relative ; top: -5px;">𝓖𝓸𝓼𝓮</span>
+    </button>
+
+        <button onclick="loadpage('page3')">
+        <img src="../assets/heart.gif" style="width: 20px;">
+        <span style="color: white; margin-left: 10px; position: relative ; top: -5px;">𝓟𝓵𝓪𝔂𝓵𝓲𝓼𝓽</span>
+    </button>
 </div>
 
-<audio id="audio" src="song.mp3"></audio>
-<div class="controls">
-    <button id="play-btn">▶️</button>
-    <button id="pause-btn">⏸️</button>
-    <button id="stop-btn">⏹️</button>
-</div>
-<input type="range" id="progress" value="0">
-<input type="range" id="volume" value="1" min="0" max="1" step="0.01">
+<div id="content"></div>
+
+
+
 
 <script>
-    const pages = {
-        page1: `<div style="font-size:0.8em; color:white;">
-                    Dear Jelly,<br>Happy birthday!!!!! I lowkey forgot your age...<br>
-                    I think your 15 now... Am I right? Probably not...😞<br>
-                    But I know a fact: you're younger than me 😌<br>
-                    Anyway, happy birthday! XOXO Kiss
-                </div>`,
-        page2: `<video controls><source src="Gose.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>`,
-        page3: `<div>
-                    <h3>Your lil presents💖</h3>
-                    <ul>
-                        <li><a href="https://open.spotify.com/playlist/2NyYEBOLrtgVdX1FiaDPG2?si=58b5613ca4b14f7a">First playlist</a></li>
-                        <li><a href="https://open.spotify.com/playlist/5lpQXDv3D5eEo0MAPatLsv?si=34a531db2edc45d5">Rock and roll</a></li>
-                        <li><a href="https://open.spotify.com/playlist/4XpWCxeUcVAoGyouEixLMu?si=af527eba501f47f8">Softie playlist</a></li>
-                    </ul>
-                </div>`
-    };
+const pages = {
+    page1: `<div style="font-size:0.8em; color:white;">
+                 Dear Jelly,<br>
+                 Happy birthday!!!!! I lowkey forgot your age...<br>
+                 I think your 15 now... Am I right? Probably not...😞<br>
+                 But I know a fact and that is that you're younger than me 😌<br>
+                 Anyway, your birthday is just in time for the end of the year,<br>
+                 and I wanted to say that I'm very very grateful that I met<br> 
+                 youuuuu, you've made my life very very funnnnnnn. I love<br>
+                 talking to you, you're very nice and most of all really pretty!!!<br>
+                 I hope you have good years ahead of you and a very very nice<br>
+                 birthday!!!<br>
+                 XOXO<br>
+                 Kiss
+            </div>`,
+    page2: `<video controls style="width: 330px; max-width:550px;position: absolute ; left: 10px; height:225px;p ;border:2px solid black; border-radius:10px; background:black; ">
+                <source src="../assets/Gose.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>`,
+    page3: `<div>
+                <ul>
+                    <li><a href="https://open.spotify.com/playlist/0zsIjnZ7yKBALwtHG90EqW?si=95bdacd7cdcf42aa">Seventeen playlist</a></li>
+                </ul>
+            </div>`
+}; // <-- important!
 
-    function loadpage(page) { document.getElementById('content').innerHTML = pages[page]; }
-    loadpage('page1');
+function loadpage(page) {
+    document.getElementById('content').innerHTML = pages[page];
+}
 
-    const audio = document.getElementById("audio");
-    const playBtn = document.getElementById("play-btn");
-    const pauseBtn = document.getElementById("pause-btn");
-    const stopBtn = document.getElementById("stop-btn");
-    const progress = document.getElementById("progress");
-    const volume = document.getElementById("volume");
+loadpage('page1');
 
-    playBtn.addEventListener("click", () => audio.play());
-    pauseBtn.addEventListener("click", () => audio.pause());
-    stopBtn.addEventListener("click", () => { audio.pause(); audio.currentTime = 0; });
 
-    audio.addEventListener("timeupdate", () => {
-        progress.value = (audio.currentTime / audio.duration) * 100 || 0;
-    });
-
-    progress.addEventListener("input", () => { audio.currentTime = (progress.value / 100) * audio.duration; });
-    volume.addEventListener("input", () => { audio.volume = volume.value; });
 </script>
 
+<body style="background-image: url('../assets/starsforever.gif'); background-attachment: fixed; background-repeat: repeat;">
 </body>
 </html>
